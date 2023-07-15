@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    background-color: #D1FAE5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body.dark-mode {
+    background-color: #1C1C1C;
+}
+
+#toggle-btn{
+    display: block;
+    margin: 10px auto 0 auto;
+    padding: 5px 8px;
+    background-color: #ECFDF5;
+    color: #10B981;
+    text-shadow: 0 0 1px #6B7280;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggle-btn.dark-mode{
+    background-color: #2F3E53;
+    color: #4ADF86;
+    text-shadow: 0 0 1px whitesmoke;
+}
+
+#main {
+    width: 550px;
+    height: 450px;
+    margin: 50px auto 0 auto;
+    padding: 100px 50px 0px 50px;
+    background-color: #ECFDF5;
+    color: #6B7280;
+}
+
+#main.dark-mode {
+    background-color: #1F2937;
+    color: #D5D4D8;
+}
+
+#heading{
+    color: #2B283A;
+    margin: 0;
+}
+
+#heading.dark-mode{
+    color: #ECFDF5;
+}
+
+.highlight {
+    color: #10B981;
+}
+
+.highlight.dark-mode{
+    color: #4ADF86
+}
+
+#subheading{
+    margin-top: 5px;
+}
+
+.btn{
+    margin-top: 20px;
+    color: #FFFFFF;
+    background-color: #10B981;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.line {
+    border-top: 1px solid #D5D4D8;
+    margin: 30px 0 20px;
+}
+
+.line.dark-mode  {
+    border-top: 1px solid #2F3E53;
+}
+
+#password-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.password-box {
+    background-color: #273549;
+    color: #5DEF92;
+    width: 211px;
+    height: 39px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.password-box.dark-mode {
+    background-color: #273549;
+    color: #55F991;
+}
+
+#alert {
+    text-align: center;
+    color: gray;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#pass-length-input {
+    background-color: #ECFDF5;
+    border: 1px solid #10B981;
+    border-radius: 5px;
+    color: #273549;
+    padding: 8px 22px;
+    font-size: 12pt;
+    width: 150px;
+}
+
+#pass-length-input.dark-mode {
+    background-color: #273549;
+    border: 1px solid #1C1C1C;
+    color: #D5D4D8;
+}
+
+.switch {
+    margin-top: 5px;
+    color: #6B7280;
+}
+
+.switch.dark-mode {
+    color: #D5D4D8;
+}
+
+.switch input{
+    cursor: pointer;
+}

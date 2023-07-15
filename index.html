@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <button id="toggle-btn" onclick="toggleDarkMode()">Mode</button>
+        <div id="main">
+            <h1 id="heading">
+                Generate a <br>
+                <span class="highlight">random password</span>
+            </h1>
+            <p id="subheading">
+                Never use an insecure password again.
+            </p>
+
+            <div id="form">
+                <input id="pass-length-input"
+                        class="text-input"
+                        type="text"
+                        placeholder="Password length">
+                        
+                <label class="switch">
+                    <input id="numbers-chk" type="checkbox">
+                    <span>Numbers</span>
+                </label>
+                <label class="switch">
+                    <input id="symbols-chk" type="checkbox">
+                    <span>Symbols</span>
+                </label>
+            </div>
+
+            <button class="btn" onclick="generateRandomPassword()">
+                Generate passwords
+            </button>
+
+            <div class="line"></div>
+
+            <div id="password-container">
+                <p id="pass-el-one" class="password-box"></p>
+                <p id="pass-el-two" class="password-box"></p>
+            </div>
+
+            <p id="alert"></p>
+
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
