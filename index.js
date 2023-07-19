@@ -17,9 +17,19 @@ const letters = characters.slice(0, 52)
 const numbers = characters.slice(52, 62)
 const symbols = characters.slice(62)
 
-let passElOne = document.getElementById("pass-el-one")
-let passElTwo = document.getElementById("pass-el-two")
-let alertEl = document.getElementById("alert")
+const passElOne = document.getElementById("pass-el-one")
+const passElTwo = document.getElementById("pass-el-two")
+const alertEl = document.getElementById("alert")
+const toggleBtn = document.getElementById("toggle-btn")
+const mainEl = document.querySelector("#main")
+const headingEl = document.querySelector("#heading")
+const higlightEl = document.querySelector(".highlight")
+const lineEl = document.querySelector(".line")
+const passBoxEl = document.querySelector(".password-box")
+const textInputEl = document.querySelector("#pass-length-input")
+const switchEl = document.querySelectorAll(".switch")
+const bodyEl = document.body
+const toggleButton = document.getElementById("toggle-btn")
 
 function generateRandomPassword() {
     let randomPassOne = ""
@@ -35,11 +45,11 @@ function generateRandomPassword() {
     }
 
     if (numElChk){
-        list = letters.concat(numbers)
+        list = list.concat(numbers)
     }
 
     if (symElChk) {
-        list = letters.concat(symbols)
+        list = list.concat(symbols)
     }
 
     for (let i=0; i < passLength; i++){
@@ -82,18 +92,15 @@ passElTwo.addEventListener("copy", function(event){
     }
 })
 
-function toggleDarkMode(){
+toggleBtn.addEventListener("click", function() {
     //#main, #heading, .higlight, .line, .password-box
     //.text-input, .switch
-    let mainEl = document.querySelector("#main")
-    let headingEl = document.querySelector("#heading")
-    let higlightEl = document.querySelector(".highlight")
-    let lineEl = document.querySelector(".line")
-    let passBoxEl = document.querySelector(".password-box")
-    let textInputEl = document.querySelector("#pass-length-input")
-    let switchEl = document.querySelectorAll(".switch");
-    let bodyEl = document.body;
-    let toggleButton = document.getElementById("toggle-btn");
+
+    if (toggleBtn.textContent === "Dark Mode"){
+        toggleBtn.textContent = "Ligth Mode"
+    } else {
+        toggleBtn.textContent = "Dark Mode"
+    }
 
     bodyEl.classList.toggle("dark-mode");
     toggleButton.classList.toggle("dark-mode");
@@ -105,4 +112,11 @@ function toggleDarkMode(){
     textInputEl.classList.toggle("dark-mode");
     switchEl.classList.toggle("dark-mode");
 
-}
+})
+
+textInputEl.addEventListener("keypress", function(event){
+    if(event.key === "Enter"){
+        event.preventDefault()
+        generateRandomPassword()
+    }
+})
